@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { setAuthToken } from "./tokenService"
 import { invoke } from "@tauri-apps/api/tauri";
-import { useHistory } from 'react-router-dom'
-import "./Login.css";
+
 
 function Login() {
   const history = useHistory()
@@ -14,7 +12,6 @@ function Login() {
   const handleLogin = () => {
     if (username === "admin" && password === "admin") {
       setLoginSuccess(true)
-      history.push('/home')
     }
   }
 
